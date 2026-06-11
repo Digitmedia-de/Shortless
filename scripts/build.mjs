@@ -24,7 +24,12 @@ const targets = {
     m.browser_specific_settings = {
       gecko: {
         id: 'shortless@digitmedia.de',
-        strict_min_version: '121.0'
+        strict_min_version: '121.0',
+        // Required by addons.mozilla.org: Shortless collects no data at all.
+        // https://mzl.la/firefox-builtin-data-consent
+        data_collection_permissions: {
+          required: ['none']
+        }
       }
     };
     return m;
