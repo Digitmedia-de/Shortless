@@ -24,12 +24,17 @@ const targets = {
     m.browser_specific_settings = {
       gecko: {
         id: 'shortless@digitmedia.de',
-        strict_min_version: '121.0',
+        // 140 is the first version that supports data_collection_permissions.
+        strict_min_version: '140.0',
         // Required by addons.mozilla.org: Shortless collects no data at all.
         // https://mzl.la/firefox-builtin-data-consent
         data_collection_permissions: {
           required: ['none']
         }
+      },
+      gecko_android: {
+        // Android gained data_collection_permissions support in 142.
+        strict_min_version: '142.0'
       }
     };
     return m;
