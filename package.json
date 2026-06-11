@@ -3,6 +3,7 @@
   "version": "0.1.1",
   "description": "Browser extension that hides YouTube Shorts – completely, or allowing only Shorts from subscribed channels.",
   "private": true,
+  "author": "Lazybone <support@digitmedia.de>",
   "type": "module",
   "license": "MIT",
   "repository": {

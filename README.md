@@ -77,6 +77,8 @@ How it works, in short:
 
 Contributions are welcome – especially selector fixes when YouTube changes its DOM. Please read [CONTRIBUTING.md](CONTRIBUTING.md) for the development setup, project rules and how to report bugs effectively. Releases are documented in the [CHANGELOG](CHANGELOG.md).
 
+Questions or problems that don't fit an issue? Contact: **support@digitmedia.de** (security reports: see [SECURITY.md](SECURITY.md)).
+
 ## Privacy
 
 Shortless stores all settings and caches locally in your browser (`storage.sync`/`storage.local`), talks only to youtube.com (subscription list, oEmbed channel lookup) and sends no data anywhere else. No analytics, no tracking, no external services.
