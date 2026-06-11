@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Shortless – Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <h1>Shortless – Settings</h1>
+
+  <section>
+    <h2>Mode</h2>
+    <label><input type="radio" name="mode" value="off"> Off – show Shorts as usual</label>
+    <label><input type="radio" name="mode" value="all"> Hide all Shorts</label>
+    <label><input type="radio" name="mode" value="subs"> Allow only Shorts from subscribed channels</label>
+    <p class="hint">In subscriptions mode, all Shorts are hidden while you are signed out of YouTube.</p>
+  </section>
+
+  <section>
+    <h2>Appearance</h2>
+    <label><input type="checkbox" id="hideSidebarEntry"> Hide the “Shorts” entry in the navigation</label>
+    <label><input type="checkbox" id="hideChannelTab"> Hide the “Shorts” tab on channel pages</label>
+    <label><input type="checkbox" id="redirectShortsPlayer"> Open Shorts links in the regular player (/shorts → /watch)</label>
+  </section>
+
+  <section>
+    <h2>Whitelist (subscriptions mode)</h2>
+    <p class="hint">Additionally allowed channels, one entry per line – handle (e.g. <code>@channelname</code>) or exact channel name.</p>
+    <textarea id="whitelist" rows="6" spellcheck="false" placeholder="@examplechannel&#10;Example Channel Name"></textarea>
+  </section>
+
+  <section>
+    <h2>Cache</h2>
+    <label>Subscription list valid for
+      <input type="number" id="subsCacheHours" min="1" max="720" step="1"> hours
+    </label>
+    <p class="hint" id="cacheInfo"></p>
+    <button id="clearCache">Clear caches (subscriptions &amp; video mappings)</button>
+  </section>
+
+  <p class="hint" id="saved"></p>
+
+  <script src="../common/settings.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

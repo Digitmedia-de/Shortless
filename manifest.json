@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "Shortless",
+  "version": "0.1.0",
+  "description": "Hides YouTube Shorts – completely, or allowing only Shorts from channels you subscribe to. When logged out, all Shorts are hidden.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "*://www.youtube.com/*",
+    "*://m.youtube.com/*"
+  ],
+  "background": {
+    "service_worker": "src/background/worker.js",
+    "scripts": ["src/background/worker.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*", "*://m.youtube.com/*"],
+      "css": ["src/content/hide-shorts.css"],
+      "js": [
+        "src/common/settings.js",
+        "src/content/subs.js",
+        "src/content/main.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_title": "Shortless",
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "options_ui": {
+    "page": "src/options/options.html",
+    "open_in_tab": true
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  }
+}

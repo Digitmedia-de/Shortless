@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <img src="../../icons/icon-32.png" alt="" width="20" height="20">
+    <h1>Shortless</h1>
+  </header>
+
+  <fieldset id="modes">
+    <label>
+      <input type="radio" name="mode" value="off">
+      <span><strong>Off</strong><small>Show Shorts as usual</small></span>
+    </label>
+    <label>
+      <input type="radio" name="mode" value="all">
+      <span><strong>Hide all</strong><small>Remove Shorts everywhere</small></span>
+    </label>
+    <label>
+      <input type="radio" name="mode" value="subs">
+      <span><strong>Subscriptions only</strong><small>Allow Shorts from subscribed channels</small></span>
+    </label>
+  </fieldset>
+
+  <div id="status" class="muted">Loading status …</div>
+
+  <div class="row">
+    <button id="refresh">Refresh subscriptions</button>
+    <a href="#" id="options">Settings</a>
+  </div>
+
+  <script src="../common/settings.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

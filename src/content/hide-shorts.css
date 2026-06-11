@@ -1,0 +1,76 @@
+/*
+ * Shortless
+ *
+ * Controlled via attributes on <html> (set by main.js):
+ *   data-hys-mode            effective mode: off | all | subs
+ *   data-hys-page            subscriptions | history | channel | shorts | other
+ *   data-hys-sidebar         hide the Shorts entry in the navigation
+ *   data-hys-chtab           hide the Shorts tab on channel pages
+ *   data-hys-channel-allowed current channel page is subscribed (subs mode)
+ *
+ * On elements (set by main.js in subs mode):
+ *   data-hys-allowed         Short belongs to a subscribed channel
+ *
+ * Watch history (/feed/history) is never filtered.
+ */
+
+/* ===================== Mode "all": hide everything ===================== */
+
+html[data-hys-mode="all"]:not([data-hys-page="history"]) ytd-reel-shelf-renderer,
+html[data-hys-mode="all"]:not([data-hys-page="history"]) ytm-reel-shelf-renderer,
+html[data-hys-mode="all"] ytd-rich-shelf-renderer[is-shorts],
+html[data-hys-mode="all"] ytd-rich-section-renderer:has(ytd-rich-shelf-renderer[is-shorts]),
+html[data-hys-mode="all"] grid-shelf-view-model:has(a[href^="/shorts/"]),
+html[data-hys-mode="all"] ytm-shorts-lockup-view-model,
+html[data-hys-mode="all"] ytm-shorts-lockup-view-model-v2,
+html[data-hys-mode="all"]:not([data-hys-page="history"]) ytd-rich-item-renderer:has(a[href^="/shorts/"]),
+html[data-hys-mode="all"]:not([data-hys-page="history"]) ytd-video-renderer:has(a[href^="/shorts/"]),
+html[data-hys-mode="all"]:not([data-hys-page="history"]) ytd-compact-video-renderer:has(a[href^="/shorts/"]),
+html[data-hys-mode="all"]:not([data-hys-page="history"]) ytd-grid-video-renderer:has(a[href^="/shorts/"]),
+html[data-hys-mode="all"]:not([data-hys-page="history"]) yt-lockup-view-model:has(a[href^="/shorts/"]),
+html[data-hys-mode="all"]:not([data-hys-page="history"]) ytm-video-with-context-renderer:has(a[href^="/shorts/"]),
+html[data-hys-mode="all"] ytd-reel-item-renderer,
+html[data-hys-mode="all"]:not([data-hys-page="history"]) ytd-video-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style="SHORTS"]) {
+  display: none !important;
+}
+
+/* ====== Mode "subs": default-deny, JS marks allowed elements ======= */
+/* The subscriptions feed and subscribed channel pages pass through.  */
+
+html[data-hys-mode="subs"]:not([data-hys-page="subscriptions"]):not([data-hys-page="history"]):not([data-hys-channel-allowed]) ytd-rich-item-renderer:has(a[href^="/shorts/"]):not([data-hys-allowed]),
+html[data-hys-mode="subs"]:not([data-hys-page="subscriptions"]):not([data-hys-page="history"]):not([data-hys-channel-allowed]) ytd-video-renderer:has(a[href^="/shorts/"]):not([data-hys-allowed]),
+html[data-hys-mode="subs"]:not([data-hys-page="subscriptions"]):not([data-hys-page="history"]):not([data-hys-channel-allowed]) ytd-compact-video-renderer:has(a[href^="/shorts/"]):not([data-hys-allowed]),
+html[data-hys-mode="subs"]:not([data-hys-page="subscriptions"]):not([data-hys-page="history"]):not([data-hys-channel-allowed]) ytd-grid-video-renderer:has(a[href^="/shorts/"]):not([data-hys-allowed]),
+html[data-hys-mode="subs"]:not([data-hys-page="subscriptions"]):not([data-hys-page="history"]):not([data-hys-channel-allowed]) yt-lockup-view-model:has(a[href^="/shorts/"]):not([data-hys-allowed]),
+html[data-hys-mode="subs"]:not([data-hys-page="subscriptions"]):not([data-hys-page="history"]):not([data-hys-channel-allowed]) ytm-shorts-lockup-view-model:not([data-hys-allowed]),
+html[data-hys-mode="subs"]:not([data-hys-page="subscriptions"]):not([data-hys-page="history"]):not([data-hys-channel-allowed]) ytm-shorts-lockup-view-model-v2:not([data-hys-allowed]),
+html[data-hys-mode="subs"]:not([data-hys-page="subscriptions"]):not([data-hys-page="history"]):not([data-hys-channel-allowed]) ytm-video-with-context-renderer:has(a[href^="/shorts/"]):not([data-hys-allowed]),
+html[data-hys-mode="subs"]:not([data-hys-page="subscriptions"]):not([data-hys-page="history"]):not([data-hys-channel-allowed]) ytd-reel-item-renderer:not([data-hys-allowed]) {
+  display: none !important;
+}
+
+/* Hide shelves that contain no allowed Short at all */
+html[data-hys-mode="subs"]:not([data-hys-page="subscriptions"]):not([data-hys-page="history"]):not([data-hys-channel-allowed]) ytd-reel-shelf-renderer:not(:has([data-hys-allowed])),
+html[data-hys-mode="subs"]:not([data-hys-page="subscriptions"]):not([data-hys-page="history"]):not([data-hys-channel-allowed]) ytm-reel-shelf-renderer:not(:has([data-hys-allowed])),
+html[data-hys-mode="subs"]:not([data-hys-page="subscriptions"]):not([data-hys-page="history"]):not([data-hys-channel-allowed]) ytd-rich-shelf-renderer[is-shorts]:not(:has([data-hys-allowed])),
+html[data-hys-mode="subs"]:not([data-hys-page="subscriptions"]):not([data-hys-page="history"]):not([data-hys-channel-allowed]) ytd-rich-section-renderer:has(ytd-rich-shelf-renderer[is-shorts]):not(:has([data-hys-allowed])),
+html[data-hys-mode="subs"]:not([data-hys-page="subscriptions"]):not([data-hys-page="history"]):not([data-hys-channel-allowed]) grid-shelf-view-model:has(a[href^="/shorts/"]):not(:has([data-hys-allowed])) {
+  display: none !important;
+}
+
+/* ============== Navigation: Shorts entry (optional) ==================== */
+
+html[data-hys-sidebar] ytd-guide-entry-renderer:has(a[title="Shorts"]),
+html[data-hys-sidebar] ytd-mini-guide-entry-renderer:has(a[title="Shorts"]),
+html[data-hys-sidebar] ytd-guide-entry-renderer:has(a[href="/shorts"]),
+html[data-hys-sidebar] ytd-mini-guide-entry-renderer:has(a[href="/shorts"]),
+html[data-hys-sidebar] ytm-pivot-bar-item-renderer:has(.pivot-shorts),
+html[data-hys-sidebar] ytm-pivot-bar-item-renderer:has(a[href^="/shorts"]) {
+  display: none !important;
+}
+
+/* ============== Channel pages: Shorts tab (optional) ======================= */
+
+html[data-hys-chtab]:not([data-hys-channel-allowed]) yt-tab-shape[tab-title="Shorts"] {
+  display: none !important;
+}

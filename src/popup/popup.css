@@ -1,0 +1,89 @@
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  width: 280px;
+  margin: 0;
+  padding: 12px;
+  font: 13px/1.4 system-ui, -apple-system, sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 14px;
+  margin: 0;
+}
+
+fieldset {
+  border: none;
+  margin: 0 0 10px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+fieldset label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+fieldset label:hover {
+  background: rgba(128, 128, 128, 0.12);
+}
+
+fieldset input {
+  margin-top: 2px;
+}
+
+fieldset span {
+  display: flex;
+  flex-direction: column;
+}
+
+fieldset small {
+  opacity: 0.7;
+}
+
+.muted {
+  opacity: 0.75;
+  font-size: 12px;
+  margin-bottom: 10px;
+  white-space: pre-line;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+button {
+  font: inherit;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(128, 128, 128, 0.4);
+  background: rgba(128, 128, 128, 0.1);
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgba(128, 128, 128, 0.2);
+}
+
+a {
+  color: inherit;
+  font-size: 12px;
+}
