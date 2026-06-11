@@ -1,0 +1,19 @@
+{
+  "name": "shortless",
+  "version": "0.1.0",
+  "description": "Browser extension that hides YouTube Shorts – completely, or allowing only Shorts from subscribed channels.",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lazybone/Shortless.git"
+  },
+  "bugs": "https://github.com/Lazybone/Shortless/issues",
+  "homepage": "https://github.com/Lazybone/Shortless",
+  "scripts": {
+    "icons": "node scripts/make-icons.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "find src scripts \\( -name '*.js' -o -name '*.mjs' \\) -exec node --check {} +"
+  }
+}

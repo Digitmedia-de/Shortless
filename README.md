@@ -1,5 +1,9 @@
 # Shortless
 
+[![CI](https://github.com/Lazybone/Shortless/actions/workflows/ci.yml/badge.svg)](https://github.com/Lazybone/Shortless/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+![Manifest V3](https://img.shields.io/badge/Manifest-V3-green)
+
 Browser extension (Chrome, Firefox, Safari) that hides YouTube Shorts – either completely, or so that only Shorts from channels you subscribe to remain visible. While signed out of YouTube, all Shorts are always hidden.
 
 ## Modes
@@ -68,3 +72,17 @@ How it works, in short:
 - The subscription list parser (`ytInitialData` / `channelRenderer`) relies on undocumented YouTube internals and may break. Fallback: the whitelist in the settings; in doubt, subs mode behaves like “Hide all” (default-deny).
 - oEmbed lookups are limited to 4 parallel requests and cached persistently (max. 5000 videos); on the very first scroll in subs mode, allowed Shorts therefore appear with a short delay.
 - Firefox MV3 shows host permissions in the install dialog; they must be granted, otherwise the content script will not run.
+
+## Contributing
+
+Contributions are welcome – especially selector fixes when YouTube changes its DOM. Please read [CONTRIBUTING.md](CONTRIBUTING.md) for the development setup, project rules and how to report bugs effectively. Releases are documented in the [CHANGELOG](CHANGELOG.md).
+
+## Privacy
+
+Shortless stores all settings and caches locally in your browser (`storage.sync`/`storage.local`), talks only to youtube.com (subscription list, oEmbed channel lookup) and sends no data anywhere else. No analytics, no tracking, no external services.
+
+## License
+
+[MIT](LICENSE)
+
+*Shortless is an independent open-source project and is not affiliated with or endorsed by YouTube or Google. YouTube is a trademark of Google LLC.*

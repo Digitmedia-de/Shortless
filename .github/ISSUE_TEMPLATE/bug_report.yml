@@ -1,0 +1,55 @@
+name: Bug report
+description: Shorts slipped through, something is hidden that should not be, or the extension misbehaves.
+labels: [bug]
+body:
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Mode
+      options:
+        - Hide all
+        - Subscriptions only
+        - "Off"
+    validations:
+      required: true
+
+  - type: input
+    id: page
+    attributes:
+      label: Page / URL
+      description: Where does it happen? (home, search, channel page, watch page, m.youtube.com, …)
+      placeholder: e.g. https://www.youtube.com/results?search_query=…
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: e.g. Chrome 137, Firefox 139, Safari 19
+    validations:
+      required: true
+
+  - type: dropdown
+    id: signedin
+    attributes:
+      label: Signed in to YouTube?
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, what did you expect?
+    validations:
+      required: true
+
+  - type: textarea
+    id: html
+    attributes:
+      label: Outer HTML of the leaking element (optional)
+      description: Right-click the element → Inspect → right-click the node → Copy → Copy outerHTML. Helps a lot with selector fixes.
+      render: html
