@@ -3,7 +3,7 @@
   "name": "Shortless",
   "version": "0.1.1",
   "description": "Hides YouTube Shorts – completely, or allowing only Shorts from channels you subscribe to. When logged out, all Shorts are hidden.",
-  "homepage_url": "https://github.com/Lazybone/Shortless",
+  "homepage_url": "https://github.com/Digitmedia-de/Shortless",
   "permissions": ["storage"],
   "host_permissions": [
     "*://www.youtube.com/*",

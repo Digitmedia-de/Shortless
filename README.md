@@ -1,6 +1,6 @@
 # Shortless
 
-[![CI](https://github.com/Lazybone/Shortless/actions/workflows/ci.yml/badge.svg)](https://github.com/Lazybone/Shortless/actions/workflows/ci.yml)
+[![CI](https://github.com/Digitmedia-de/Shortless/actions/workflows/ci.yml/badge.svg)](https://github.com/Digitmedia-de/Shortless/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![Manifest V3](https://img.shields.io/badge/Manifest-V3-green)
 
