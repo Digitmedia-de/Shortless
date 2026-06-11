@@ -6,39 +6,105 @@
   <link rel="stylesheet" href="options.css">
 </head>
 <body>
-  <h1>Shortless – Settings</h1>
+  <header>
+    <img src="../../icons/icon-48.png" alt="" width="32" height="32">
+    <h1>Shortless <span>Settings</span></h1>
+    <a class="icon-link" href="https://github.com/Lazybone/Shortless" target="_blank" rel="noopener" title="Shortless on GitHub">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+      </svg>
+    </a>
+  </header>
 
   <section>
-    <h2>Mode</h2>
-    <label><input type="radio" name="mode" value="off"> Off – show Shorts as usual</label>
-    <label><input type="radio" name="mode" value="all"> Hide all Shorts</label>
-    <label><input type="radio" name="mode" value="subs"> Allow only Shorts from subscribed channels</label>
+    <h2>
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+        <line x1="1" y1="1" x2="23" y2="23"/>
+      </svg>
+      Mode
+    </h2>
+    <div class="mode-grid">
+      <label class="mode-card">
+        <input type="radio" name="mode" value="off">
+        <strong>Off</strong>
+        <small>Show Shorts as usual</small>
+      </label>
+      <label class="mode-card">
+        <input type="radio" name="mode" value="all">
+        <strong>Hide all</strong>
+        <small>Remove Shorts everywhere</small>
+      </label>
+      <label class="mode-card">
+        <input type="radio" name="mode" value="subs">
+        <strong>Subscriptions only</strong>
+        <small>Allow Shorts from subscribed channels</small>
+      </label>
+    </div>
     <p class="hint">In subscriptions mode, all Shorts are hidden while you are signed out of YouTube.</p>
   </section>
 
   <section>
-    <h2>Appearance</h2>
-    <label><input type="checkbox" id="hideSidebarEntry"> Hide the “Shorts” entry in the navigation</label>
-    <label><input type="checkbox" id="hideChannelTab"> Hide the “Shorts” tab on channel pages</label>
-    <label><input type="checkbox" id="redirectShortsPlayer"> Open Shorts links in the regular player (/shorts → /watch)</label>
+    <h2>
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+      </svg>
+      Appearance
+    </h2>
+    <label class="switch-row">
+      <span>Hide the “Shorts” entry in the navigation</span>
+      <input type="checkbox" id="hideSidebarEntry" class="toggle">
+    </label>
+    <label class="switch-row">
+      <span>Hide the “Shorts” tab on channel pages</span>
+      <input type="checkbox" id="hideChannelTab" class="toggle">
+    </label>
+    <label class="switch-row">
+      <span>Open Shorts links in the regular player <code>/shorts → /watch</code></span>
+      <input type="checkbox" id="redirectShortsPlayer" class="toggle">
+    </label>
   </section>
 
   <section>
-    <h2>Whitelist (subscriptions mode)</h2>
+    <h2>
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M20 6 9 17l-5-5"/>
+      </svg>
+      Whitelist <em>(subscriptions mode)</em>
+    </h2>
     <p class="hint">Additionally allowed channels, one entry per line – handle (e.g. <code>@channelname</code>) or exact channel name.</p>
     <textarea id="whitelist" rows="6" spellcheck="false" placeholder="@examplechannel&#10;Example Channel Name"></textarea>
   </section>
 
   <section>
-    <h2>Cache</h2>
-    <label>Subscription list valid for
+    <h2>
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+      </svg>
+      Cache
+    </h2>
+    <label class="inline-row">Subscription list valid for
       <input type="number" id="subsCacheHours" min="1" max="720" step="1"> hours
     </label>
     <p class="hint" id="cacheInfo"></p>
-    <button id="clearCache">Clear caches (subscriptions &amp; video mappings)</button>
+    <button id="clearCache">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+      </svg>
+      Clear caches (subscriptions &amp; video mappings)
+    </button>
   </section>
 
-  <p class="hint" id="saved"></p>
+  <footer>
+    <a href="https://github.com/Lazybone/Shortless" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true">
+        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+      </svg>
+      Source code, issues &amp; feedback on GitHub
+    </a>
+  </footer>
+
+  <div id="saved" class="toast" hidden>Saved.</div>
 
   <script src="../common/settings.js"></script>
   <script src="options.js"></script>

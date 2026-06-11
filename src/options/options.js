@@ -8,9 +8,9 @@
   let savedTimer = null;
 
   function flashSaved() {
-    savedEl.textContent = 'Saved.';
+    savedEl.hidden = false;
     clearTimeout(savedTimer);
-    savedTimer = setTimeout(() => { savedEl.textContent = ''; }, 1500);
+    savedTimer = setTimeout(() => { savedEl.hidden = true; }, 1500);
   }
 
   async function renderCacheInfo() {
