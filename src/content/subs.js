@@ -255,5 +255,6 @@ const hysSubs = (() => {
     return status();
   }
 
-  return { isVideoAllowed, isChannelAllowed, status, refresh, ensureFresh };
+  // ensureFresh stays internal: callers use isVideoAllowed/isChannelAllowed/refresh.
+  return { isVideoAllowed, isChannelAllowed, status, refresh };
 })();
