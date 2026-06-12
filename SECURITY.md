@@ -5,6 +5,6 @@ Shortless runs entirely in your browser, talks only to youtube.com and collects 
 ## Reporting a vulnerability
 
 - **Email:** support@digitmedia.de
-- Alternatively, use GitHub's [private vulnerability reporting](https://github.com/Digitmedia-de/Shortless/security/advisories/new) if enabled.
+- Alternatively, use GitHub's [private vulnerability reporting](https://github.com/Lazybone/Shortless/security/advisories/new) if enabled.
 
 Please do **not** open a public issue for security problems. You should receive a response within a few days. Supported version: the latest release.
