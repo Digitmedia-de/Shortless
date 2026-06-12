@@ -141,11 +141,13 @@
       if (sender?.id !== api.runtime.id) return;
       if (!msg || typeof msg.type !== 'string') return;
       if (msg.type === 'hys-status') {
-        hysSubs.status().then((s) => sendResponse({
-          loggedIn,
-          mode: effectiveMode(),
-          ...s
-        }));
+        hysSubs.status()
+          .then((s) => sendResponse({
+            loggedIn,
+            mode: effectiveMode(),
+            ...s
+          }))
+          .catch((e) => sendResponse({ error: String(e) }));
         return true;
       }
       if (msg.type === 'hys-refresh-subs') {

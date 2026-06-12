@@ -37,6 +37,7 @@
     if (tab) {
       try {
         tabStatus = await api.tabs.sendMessage(tab.id, { type: 'hys-status' });
+        if (tabStatus?.error) tabStatus = null;
       } catch {
         lines.push('Reload the YouTube tab to see its status.');
       }
