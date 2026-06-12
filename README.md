@@ -24,6 +24,14 @@ Additional settings (options page):
 
 Watch history (`/feed/history`) is never filtered.
 
+## Installation
+
+| Browser | Store |
+|---|---|
+| **Firefox** | [Firefox Add-ons](https://addons.mozilla.org/firefox/addon/shortless_yt/) |
+| **Chrome** | Coming soon |
+| **Safari** | Coming soon |
+
 ## Installation (development)
 
 Build first:
