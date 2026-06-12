@@ -15,6 +15,7 @@
   "scripts": {
     "icons": "node scripts/make-icons.mjs",
     "build": "node scripts/build.mjs",
-    "check": "find src scripts \\( -name '*.js' -o -name '*.mjs' \\) -exec node --check {} +"
+    "check": "find src scripts \\( -name '*.js' -o -name '*.mjs' \\) -exec node --check {} +",
+    "test": "node --test 'test/*.test.mjs'"
   }
 }
