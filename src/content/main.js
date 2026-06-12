@@ -138,6 +138,7 @@
     });
 
     api.runtime.onMessage.addListener((msg, sender, sendResponse) => {
+      if (sender?.id !== api.runtime.id) return;
       if (!msg || typeof msg.type !== 'string') return;
       if (msg.type === 'hys-status') {
         hysSubs.status().then((s) => sendResponse({
