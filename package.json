@@ -12,6 +12,9 @@
   },
   "bugs": "https://github.com/Digitmedia-de/Shortless/issues",
   "homepage": "https://github.com/Digitmedia-de/Shortless",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "icons": "node scripts/make-icons.mjs",
     "build": "node scripts/build.mjs",
