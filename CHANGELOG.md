@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-06-12
+
+### Changed
+
+- Updated repository URLs to the new GitHub home (`Digitmedia-de/Shortless`)
+
 ## [0.1.1] - 2026-06-11
 
 ### Added
@@ -32,6 +38,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Modern UI with icons, toggle switches and dark mode support
 - Build pipeline for Chrome, Firefox and Safari (MV3, zero dependencies)
 
-[Unreleased]: https://github.com/Lazybone/Shortless/compare/v0.1.1...HEAD
-[0.1.1]: https://github.com/Lazybone/Shortless/compare/v0.1.0...v0.1.1
-[0.1.0]: https://github.com/Lazybone/Shortless/releases/tag/v0.1.0
+[Unreleased]: https://github.com/Digitmedia-de/Shortless/compare/v0.1.2...HEAD
+[0.1.2]: https://github.com/Digitmedia-de/Shortless/compare/v0.1.1...v0.1.2
+[0.1.1]: https://github.com/Digitmedia-de/Shortless/compare/v0.1.0...v0.1.1
+[0.1.0]: https://github.com/Digitmedia-de/Shortless/releases/tag/v0.1.0
