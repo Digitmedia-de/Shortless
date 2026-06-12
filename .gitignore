@@ -2,3 +2,7 @@ dist/
 platform/
 node_modules/
 .DS_Store
+
+# AI tooling
+.claude/
+.codewright/
